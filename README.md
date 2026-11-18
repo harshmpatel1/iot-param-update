@@ -1,0 +1,47 @@
+first 
+npm install 
+
+sec 
+npm run build
+
+third 
+npm run start
+
+website will available with params compalsory like. on third party website req this site with this url
+http://localhost:3000/?macId=60323b0a1d4a&software=v2.5.1&plantName=FactoryA&modelNum=XJ-2000&internetSerialNo=SN12345678&ssid=MyWifi&signal=85&Type=Deye
+
+📄 How to Use the Network Request Monitor Website
+
+To launch the site correctly, you must pass the following query parameters in the URL:
+
+http://localhost:3000?macId=60323b0a1d4a&software=v2.5.1&plantName=FactoryA&modelNum=XJ-2000&internetSerialNo=SN12345678&ssid=MyWifi&signal=85&Type=Deye
+
+🔧 Required Parameters:
+- macId: Device MAC address (e.g., 60323b0a1d4a)
+- software: Software version (e.g., v2.5.1)
+- plantName: Name of the plant or factory (e.g., FactoryA)
+- modelNum: Device model number (e.g., XJ-2000)
+- internetSerialNo: Serial number used for internet registration (e.g., SN12345678)
+- ssid: Wi-Fi SSID (e.g., MyWifi)
+- signal: Signal strength (e.g., 85)
+- Type: Device type or category (e.g., Deye)
+
+✅ Example Usage:
+Paste the following URL into your browser to open the site with sample data:
+http://localhost:3000?macId=60323b0a1d4a&software=v2.5.1&plantName=FactoryA&modelNum=XJ-2000&internetSerialNo=SN12345678&ssid=MyWifi&signal=85&Type=Deye
+
+💡 Tip:
+You can dynamically generate this URL using JavaScript like this:
+const deviceInfo = {
+  macId: '60323b0a1d4a',
+  software: 'v2.5.1',
+  plantName: 'FactoryA',
+  modelNum: 'XJ-2000',
+  internetSerialNo: 'SN12345678',
+  ssid: 'MyWifi',
+  signal: '85',
+  Type: 'Deye'
+};
+const queryString = new URLSearchParams(deviceInfo).toString();
+const url = `http://localhost:3000?${queryString}`;
+window.open(url, '_blank');
